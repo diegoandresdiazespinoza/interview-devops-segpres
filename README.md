@@ -56,6 +56,7 @@ Los siguientes desafíos están relacionados con el repositorio. Para dar su opi
 Hemos escuchado cosas buenas docker y pensamos qué pasaría si lo traemos a nuestro stack de aplicaciones.
 
 ¿Puedes ayudar a Dockerizar `frontend`, `backend.v1` y `backend.v2`?
+R: se completa Dockerfile [./src/frontend](./src/frontend/Dockerfile):
 
 Hemos proporcionado un `Dockerfile` básico en la carpeta de cada servicio para ayudarlo a comenzar.
 
