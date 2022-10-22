@@ -56,19 +56,24 @@ Los siguientes desafíos están relacionados con el repositorio. Para dar su opi
 Hemos escuchado cosas buenas docker y pensamos qué pasaría si lo traemos a nuestro stack de aplicaciones.
 
 ¿Puedes ayudar a Dockerizar `frontend`, `backend.v1` y `backend.v2`?
-R: se completa Dockerfile [./src/frontend](./src/frontend/Dockerfile):
 
 Hemos proporcionado un `Dockerfile` básico en la carpeta de cada servicio para ayudarlo a comenzar.
+
+**R: se completa un Dockerfile para frontend [./src/frontend/Dockerfile](./src/frontend/Dockerfile), backend.v1 [./src/backend.v1/Dockerfile](./src/backend.v1/Dockerfile), backend.v2 [./src/backend.v2/Dockerfile](./src/backend.v2/Dockerfile)**
 
 ### 2. ¿Podemos automatizar la construcción del contenedor?
 
 Actualmente, nuestros desarrolladores tienen que ejecutar manualmente `docker build` después de realizar cambios. ¿Puedes escribir un docker-compose para automatizar el proceso de compilación y comenzar un nuevo contenedor con la imagen actualizada?
+
+**R: se agrega un docker-compose.yml en la raiz que permite iniciar frontend, backend.v1 y backend.v2. Habría que definir un variable de entorno en el Dockerfile del frontend para apuntar a la api root que se desee usar. Por el momento sólo levanta los 3 proyectos en los puertos 4100, 8080 y 5000. Los script de testing run-api-tests.sh y run-api-tests-ddiaz.sh para lanzar los test del backend. El front inicia pero lanza un error. Eso quedaría pendiente investigar porqué el front está lanzando error.**
 
 ### 3. ¿Has oído hablar de Kubernetes?
 
 [Kubernetes](https://kubernetes.io/) parece una gran herramienta para ayudarnos con la implementación, el escalado y la administración de estos servicios en contenedores.
 
 ¿Puedes crear un archivo `yaml` para cada servicio con los recursos necesarios de Kubernetes que nos permitirá escalarlos en el futuro?
+
+**R: Se crea archivo [k8s-manifests](./k8s-manifests) utilizando Kompose para hacer un archivo rápido de ejemplo**
 
 ### 4. ¿Has oído hablar de Infraestructura como código?
 
@@ -78,6 +83,10 @@ La infraestructura como código (IaC) es muy popular.
 
 ¿Puedes crear un archivo `tf` para realizar el despliegue del cluster de kubernetes creado en el paso anterios?
 
+**R: Se crea archivo [app.tf](./app.tf) utilizando tfk8s para hacer un archivo rápido de ejemplo**
+
 **Es bueno tener:** Sería una demostración genial para nuestras partes interesadas si pudiéramos poner las aplicaciones en línea y pudieran acceder a ellas desde su computadora.
+
+**R: queda funcionando en ddiaz.cl puertos 4100, 8080 y 5000. El frontend está apuntando a la api en 8080**
 
 Está bien si es solo una dirección IP o un nombre de dominio aleatorio.
