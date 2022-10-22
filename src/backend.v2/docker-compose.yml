@@ -1,0 +1,7 @@
+version: "3.0"
+services:
+
+  backendv2:
+    build: src/backend.v2/
+    ports:
+      - "5000:5000"

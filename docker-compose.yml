@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  frontend:
+    build: src/frontend/
+    ports:
+      - "4100:4100"
+
+  backendv1:
+    build: src/backend.v1/
+    ports:
+      - "8080:8080"
+
+  backendv2:
+    build: src/backend.v2/
+    ports:
+      - "5000:5000"
