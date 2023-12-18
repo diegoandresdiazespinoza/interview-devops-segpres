@@ -17,7 +17,7 @@ require (
 	github.com/mattn/go-sqlite3 v0.0.0-20170710140056-47fc4e5e9153 // indirect
 	github.com/rainycape/unidecode v0.0.0-20150907023854-cb7f23ec59be // indirect
 	github.com/stretchr/testify v1.3.0
-	golang.org/x/crypto v0.0.0-20191010185427-af544f31c8ac
+	golang.org/x/crypto v0.17.0
 	google.golang.org/appengine v1.6.5 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2
 )
